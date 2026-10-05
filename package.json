@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@marsidev/react-turnstile": "^1.6.1",
+    "clsx": "^2.1.1",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "lottie-web": "^5.13.0",
