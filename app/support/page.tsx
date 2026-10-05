@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "SmartCash doo - platna institucija",
+  title: "SmartCash doo - Platna institucija",
   description: "Vaš partner za moderna platna rješenja",
   // other metadata
 };

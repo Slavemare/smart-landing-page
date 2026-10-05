@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SmartCash doo - platna institucija",
+  title: "SmartCash doo - Platna institucija",
   description: "Vaš partner za moderna platna rješenja",
   // other metadata
 };

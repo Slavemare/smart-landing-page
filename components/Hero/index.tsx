@@ -101,7 +101,45 @@ const Hero = () => {
                     korištenje.
                   </div>
                   <div className="w-full sm:w-auto flex flex-row items-start justify-start shrink-0 relative mt-8">
-                    <Button className="bg-emerald-500 rounded border border-transparent pt-6 pr-8 pb-6 pl-6 flex flex-row gap-2 items-center justify-center w-full md:w-[250px] h-[52px] text-neutral-50 font-montserrat text-lg sm:text-base uppercase leading-normal font-semibold hover:bg-emerald-700 transition mt-4 mb-8 md:mt-0 md:mb-0 shadow-md">
+                    <Button
+                      onClick={() => {
+                        const target = document.getElementById("features");
+
+                        if (!target) return;
+
+                        const startPosition = window.scrollY;
+                        const targetPosition =
+                          target.getBoundingClientRect().top + window.scrollY;
+
+                        const distance = targetPosition - startPosition;
+                        const duration = 1500;
+                        let startTime: number | null = null;
+
+                        const animation = (currentTime: number) => {
+                          if (startTime === null) startTime = currentTime;
+
+                          const elapsed = currentTime - startTime;
+                          const progress = Math.min(elapsed / duration, 1);
+
+                          const easeInOut =
+                            progress < 0.5
+                              ? 2 * progress * progress
+                              : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+                          window.scrollTo(
+                            0,
+                            startPosition + distance * easeInOut
+                          );
+
+                          if (progress < 1) {
+                            requestAnimationFrame(animation);
+                          }
+                        };
+
+                        requestAnimationFrame(animation);
+                      }}
+                      className="bg-emerald-500 rounded border border-transparent pt-6 pr-8 pb-6 pl-6 flex flex-row gap-2 items-center justify-center w-full md:w-[250px] h-[52px] text-neutral-50 font-montserrat text-lg sm:text-base uppercase leading-normal font-semibold hover:bg-emerald-700 transition mt-4 mb-8 md:mt-0 md:mb-0 shadow-md"
+                    >
                       Pročitajte više
                     </Button>
                   </div>
