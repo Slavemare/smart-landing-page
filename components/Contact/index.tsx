@@ -98,7 +98,7 @@ const Contact = () => {
                 Naš tim za podršku kontaktiraće Vas u najkraćem mogućem roku.
               </p>
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} autoComplete="off">
                 <div className="-mx-4 flex flex-wrap">
                   {/* Ime */}
                   <div className="w-full px-4 md:w-1/2">
@@ -220,7 +220,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="shadow-submit dark:shadow-submit-dark w-full rounded-sm bg-emerald-600 px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60 lg:w-1/4"
+                      className="shadow-submit dark:shadow-submit-dark w-full rounded-sm bg-emerald-600 px-9 py-4 text-base font-medium text-white duration-300 hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60 lg:w-1/4"
                     >
                       {isSubmitting ? "Šaljem..." : "Pošaljite upit"}
                     </button>
