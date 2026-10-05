@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 450px;
+  --breakpoint-sm: 575px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  --container-center: true;
+  --container-padding: 1rem;
+
+  --color-current: currentColor;
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-black: #121723;
+  --color-dark: #1d2430;
+  --color-primary: #4a6cf7;
+  --color-yellow: #fbb040;
+  --color-body-color: #788293;
+  --color-body-color-dark: #959cb1;
+  --color-gray-dark: #1e232e;
+  --color-gray-light: #f0f2f9;
+  --color-stroke: #e3e8ef;
+  --color-stroke-dark: #353943;
+  --color-bg-color-dark: #171c28;
+
+  --shadow-signUp: 0px 5px 10px rgba(4, 10, 34, 0.2);
+  --shadow-one: 0px 2px 3px rgba(7, 7, 77, 0.05);
+  --shadow-two: 0px 5px 10px rgba(6, 8, 15, 0.1);
+  --shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
+  --shadow-sticky: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+  --shadow-sticky-dark: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+  --shadow-feature-2: 0px 10px 40px rgba(48, 86, 211, 0.12);
+  --shadow-submit: 0px 5px 20px rgba(4, 10, 34, 0.1);
+  --shadow-submit-dark: 0px 5px 20px rgba(4, 10, 34, 0.1);
+  --shadow-btn: 0px 1px 2px rgba(4, 10, 34, 0.15);
+  --shadow-btn-hover: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-btn-light: 0px 1px 2px rgba(0, 0, 0, 0.1);
+
+  --drop-shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (min-width: 575px) {
+    max-width: 575px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 992px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  input[type="checkbox"]:checked ~ label span svg {
+    @apply inline-flex;
+  }
+
+  .sticky .header-logo {
+    @apply py-5 lg:py-2;
+  }
+
+  .sticky .menu-scroll.active {
+    @apply opacity-70;
+  }
+
+  input#togglePlan:checked ~ .dot {
+    @apply translate-x-full;
+  }
+
+  input#checkboxLabel:checked ~ .box span {
+    @apply opacity-100;
+  }
+}
+@keyframes services-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+.animate-services-marquee {
+  animation: services-marquee 25s linear infinite;
+}
