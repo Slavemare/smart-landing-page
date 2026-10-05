@@ -11,9 +11,26 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SmartCash doo - Platna institucija",
-  description: "Vaš partner za moderna platna rješenja",
-  // other metadata
+  metadataBase: new URL("https://smart-landing-page.vercel.app"),
+
+  title: "Smart Landing Page",
+  description: "....",
+
+  openGraph: {
+    title: "Smart Landing Page",
+    description: "....",
+    siteName: "Smart Landing Page",
+    images: [
+      {
+        url: "/images/logo-dark.png",
+        width: 1200,
+        height: 630,
+        alt: "Smart Landing Page",
+      },
+    ],
+    locale: "bs_BA",
+    type: "website",
+  },
 };
 
 export default function Home() {
