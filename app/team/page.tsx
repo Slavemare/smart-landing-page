@@ -14,7 +14,7 @@ const ContactPage = () => {
     <>
       <Breadcrumb
         pageName="Stručnost koja nas pokreće"
-        description="Iza svake sigurne i pouzdane finansijske usluge stoji tim stručnjaka koji objedinjuje iskustvo bankara, pravnu ekspertizu i savremena tehnološka znanja. Zajedničkim radom gradimo stabilna, sigurna i moderna rješenja koja odgovaraju potrebama naših korisnika."
+        description="Iza svake sigurne i pouzdane finansijske usluge stoji tim stručnjaka koji objedinjuje iskustvo finansijskog sektora, pravnu ekspertizu i savremena tehnološka znanja. Zajedničkim radom gradimo stabilna, sigurna i moderna rješenja koja odgovaraju potrebama naših korisnika."
       />
 
       <AboutSectionTwo />

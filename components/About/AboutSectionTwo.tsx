@@ -7,7 +7,7 @@ const AboutSectionTwo = () => {
         {" "}
         <SectionTitle
           title="Naš tim"
-          paragraph="Tim vrhunskih bankarskih, pravnih i IT stručnjaka za pouzdane i savremene finansijske usluge."
+          paragraph="Tim vrhunskih finansijskih, pravnih i IT stručnjaka za pouzdane i savremene finansijske usluge."
           center
         />
         <div className="flex flex-wrap items-center justify-between">
