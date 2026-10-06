@@ -11,7 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://smart-landing-page.vercel.app"),
+  metadataBase: new URL("https://smart-landing-page-five.vercel.app/"),
 
   title: "Smart Landing Page",
   description: "....",

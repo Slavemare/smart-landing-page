@@ -86,21 +86,21 @@ const Hero = () => {
                       🚀 Više od plaćanja{" "}
                     </div>
                     <div
-                      className="text-emerald-400 text-left font-montserrat text-xl md:text-2xl xl:text-3xl leading-[120%] font-semibold relative my-2"
+                      className="text-emerald-500 text-left font-montserrat text-xl md:text-2xl xl:text-3xl leading-[120%] font-semibold relative my-2"
                       style={{
                         letterSpacing: "0.04em",
-                        WebkitTextStroke: "1px #34D399",
+                        WebkitTextStroke: "1px #10B981",
                       }}
                     >
                       Brza, sigurna i jednostavna finansijska rješenja{" "}
                     </div>
                   </div>
                   <div className="text-gray-700 dark:text-[#dcdcdc] text-left font-montserrat text-lg leading-normal font-semibold relative w-full md:w-3/4 xl:w-[523px] mt-4 mb-8 md:mt-4 md:mb-2">
-                    Sigurna i pouzdana platna rješenja prilagođena potrebama
-                    građana i poslovnih korisnika, uz jednostavno i efikasno
-                    korištenje.
+                    Sigurna i pouzdana platna rješenja za građane i poslovne
+                    korisnike, uz široku dostupnost usluga i mogućnost
+                    partnerskog širenja kroz podagentsku mrežu.
                   </div>
-                  <div className="w-full sm:w-auto flex flex-row items-start justify-start shrink-0 relative mt-8">
+                  <div className="w-full flex flex-col lg:flex-row items-start justify-start gap-4 shrink-0 relative mt-8">
                     <Button
                       onClick={() => {
                         const target = document.getElementById("features");
@@ -138,9 +138,51 @@ const Hero = () => {
 
                         requestAnimationFrame(animation);
                       }}
-                      className="bg-emerald-500 rounded border border-transparent pt-6 pr-8 pb-6 pl-6 flex flex-row gap-2 items-center justify-center w-full md:w-[250px] h-[52px] text-neutral-50 font-montserrat text-lg sm:text-base uppercase leading-normal font-semibold hover:bg-emerald-700 transition mt-4 mb-8 md:mt-0 md:mb-0 shadow-md"
+                      className="bg-emerald-600 rounded border border-transparent pt-6 pr-8 pb-6 pl-6 flex flex-row gap-2 items-center justify-center w-full lg:w-[250px] h-[52px] text-neutral-50 font-montserrat text-lg sm:text-base uppercase leading-normal font-semibold hover:bg-emerald-700 transition mt-4 mb-0 shadow-lg"
                     >
                       Pročitajte više
+                    </Button>
+
+                    <Button
+                      onClick={() => {
+                        const target = document.getElementById("about");
+
+                        if (!target) return;
+
+                        const startPosition = window.scrollY;
+                        const targetPosition =
+                          target.getBoundingClientRect().top + window.scrollY;
+
+                        const distance = targetPosition - startPosition;
+                        const duration = 1500;
+                        let startTime: number | null = null;
+
+                        const animation = (currentTime: number) => {
+                          if (startTime === null) startTime = currentTime;
+
+                          const elapsed = currentTime - startTime;
+                          const progress = Math.min(elapsed / duration, 1);
+
+                          const easeInOut =
+                            progress < 0.5
+                              ? 2 * progress * progress
+                              : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+                          window.scrollTo(
+                            0,
+                            startPosition + distance * easeInOut
+                          );
+
+                          if (progress < 1) {
+                            requestAnimationFrame(animation);
+                          }
+                        };
+
+                        requestAnimationFrame(animation);
+                      }}
+                      className="bg-blue-900 rounded border border-transparent pt-6 pr-8 pb-6 pl-6 flex flex-row gap-2 items-center justify-center w-full lg:w-[250px] h-[52px] text-neutral-50 font-montserrat text-lg sm:text-base uppercase leading-normal font-semibold hover:bg-blue-950 transition mt-0 mb-8 lg:mb-0 shadow-lg mt-4"
+                    >
+                      Postanite partner
                     </Button>
                   </div>
                 </div>

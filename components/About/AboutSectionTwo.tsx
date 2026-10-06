@@ -160,10 +160,10 @@ const AboutSectionTwo = () => {
             <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bankarski tim
+                  Finansijski tim
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Naš bankarski tim objedinjuje dugogodišnje iskustvo, stručno
+                  Naš finansijski tim objedinjuje dugogodišnje iskustvo, stručno
                   znanje i razumijevanje potreba savremenog finansijskog
                   tržišta.
                 </p>
@@ -173,9 +173,9 @@ const AboutSectionTwo = () => {
                   Pravni tim
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Naš pravni tim pruža stručnu podršku u svim aspektima
-                  poslovanja, uz poseban fokus na usklađenost sa propisima,
-                  sigurnost i zaštitu prava korisnika.
+                  Na usluzi Vam je pravni tim pruža stručnu podršku u svim
+                  aspektima poslovanja, uz poseban fokus na usklađenost sa
+                  propisima, sigurnost i zaštitu prava korisnika.
                 </p>
               </div>
               <div className="mb-1">

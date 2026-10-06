@@ -21,18 +21,6 @@ const ContactPage = () => {
           {/* Dekorativna zelena linija */}
           <div className="absolute left-0 top-0 h-full w-1.5 bg-emerald-600" />
 
-          {/* Naslov */}
-          <div className="mb-12 border-b border-gray-200 pb-8 dark:border-gray-700">
-            <h1 className="font-montserrat text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-              Uslovi korištenja
-            </h1>
-
-            <p className="mt-3 font-montserrat text-base leading-7 text-gray-500 dark:text-gray-400">
-              Uslovi koji definišu korištenje naše internet stranice, sadržaja i
-              informacija o našim uslugama.
-            </p>
-          </div>
-
           {/* 1. Opšte odredbe */}
           <section className="mb-10">
             <h2 className="mb-4 font-montserrat text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">

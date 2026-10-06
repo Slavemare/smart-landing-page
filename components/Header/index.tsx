@@ -36,6 +36,11 @@ const Header = () => {
     }
   };
 
+  const closeNavbar = () => {
+    setNavbarOpen(false);
+    setOpenIndex(-1);
+  };
+
   const usePathName = usePathname();
 
   return (
@@ -110,6 +115,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
+                            onClick={closeNavbar}
                             className={`flex py-2 text-xl lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-emerald-700 dark:text-white"
@@ -145,6 +151,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
+                                  onClick={closeNavbar}
                                   className="block rounded py-2.5 text-base text-dark hover:text-emerald-500 dark:text-white/70 dark:hover:text-white lg:px-3"
                                 >
                                   {submenuItem.title}
