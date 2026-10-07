@@ -52,7 +52,7 @@ function Brands() {
   return (
     <div className="w-full mx-auto items-center justify-center shrink-0 relative font-montserrat px-4 md:px-0 2xl:w-full">
       <div className="flex flex-col gap-4 items-center justify-start shrink-0 relative">
-        <div className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 rounded-3xl border-solid border-emerald-600 border flex flex-row gap-1 items-center justify-start shrink-0 relative px-8 py-2">
+        <div className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 rounded-3xl border-solid border-emerald-600 border flex flex-row gap-1 items-center justify-start shrink-0 relative px-8 py-2 mt-8">
           <span className="text-lg mr-1">🔥</span>
 
           <div className="text-white text-center font-montserrat text-base leading-normal font-semibold uppercase relative pr-2">
